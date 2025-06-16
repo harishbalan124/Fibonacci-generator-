@@ -1,0 +1,43 @@
+Here's a simple Fibonacci number generator program in Python. It uses a generator function to yield Fibonacci numbers one by one:
+
+✅ Generator-based Fibonacci Program
+
+def fibonacci_generator():
+    a, b = 0, 1
+    while True:
+        yield a
+        a, b = b, a + b
+
+fib = fibonacci_generator()
+for _ in range(10):
+    print(next(fib))
+
+Output:
+
+0
+1
+1
+2
+3
+5
+8
+13
+21
+34
+
+
+---
+
+🔁 Alternate: Generate first N Fibonacci numbers
+
+def fibonacci_n(n):
+    a, b = 0, 1
+    for _ in range(n):
+        print(a, end=' ')
+        a, b = b, a + b
+
+# Example
+fibonacci_n(10)
+
+Let me know if you want it to store values in a list, take input from user, or use recursion.
+
